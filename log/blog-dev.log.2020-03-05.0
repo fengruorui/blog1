@@ -1,0 +1,1480 @@
+2020-03-05 10:57:59.291  INFO 6040 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 6040 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 10:57:59.291 DEBUG 6040 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 10:57:59.291  INFO 6040 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 10:57:59.338  INFO 6040 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-05 10:57:59.338  INFO 6040 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-05 10:58:00.017  INFO 6040 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 10:58:00.033  INFO 6040 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 JPA repository interfaces.
+2020-03-05 10:58:00.860  INFO 6040 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 10:58:00.876  INFO 6040 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 10:58:00.876  INFO 6040 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 10:58:01.054  INFO 6040 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 10:58:01.055  INFO 6040 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1717 ms
+2020-03-05 10:58:01.221  INFO 6040 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-05 10:58:02.697 ERROR 6040 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: The server time zone value '?§Û???????' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:76)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:320)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:357)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$73d9f710.CGLIB$jpaVendorAdapter$4(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$73d9f710$$FastClassBySpringCGLIB$$79493d0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$73d9f710.jpaVendorAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.feng.blog.BlogApplication.main(BlogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.InvalidConnectionAttributeException: The server time zone value '?§Û???????' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.util.TimeUtil.getCanonicalTimezone(TimeUtil.java:132)
+	at com.mysql.cj.protocol.a.NativeProtocol.configureTimezone(NativeProtocol.java:2118)
+	at com.mysql.cj.protocol.a.NativeProtocol.initServerSession(NativeProtocol.java:2142)
+	at com.mysql.cj.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:1310)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:967)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 81 common frames omitted
+
+2020-03-05 10:58:02.706  WARN 6040 --- [restartedMain] o.s.b.a.orm.jpa.DatabaseLookup           : Unable to determine jdbc url from datasource
+
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: The server time zone value '?§Û???????' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:329)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:357)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$73d9f710.CGLIB$jpaVendorAdapter$4(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$73d9f710$$FastClassBySpringCGLIB$$79493d0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$73d9f710.jpaVendorAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.feng.blog.BlogApplication.main(BlogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: The server time zone value '?§Û???????' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:320)
+	... 67 common frames omitted
+Caused by: java.sql.SQLException: The server time zone value '?§Û???????' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:76)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	... 68 common frames omitted
+Caused by: com.mysql.cj.exceptions.InvalidConnectionAttributeException: The server time zone value '?§Û???????' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.util.TimeUtil.getCanonicalTimezone(TimeUtil.java:132)
+	at com.mysql.cj.protocol.a.NativeProtocol.configureTimezone(NativeProtocol.java:2118)
+	at com.mysql.cj.protocol.a.NativeProtocol.initServerSession(NativeProtocol.java:2142)
+	at com.mysql.cj.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:1310)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:967)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 81 common frames omitted
+
+2020-03-05 10:58:02.751  INFO 6040 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 10:58:02.827  INFO 6040 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.15.Final}
+2020-03-05 10:58:02.829  INFO 6040 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-03-05 10:58:03.003  INFO 6040 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-05 10:58:03.442  INFO 6040 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-05 10:58:04.458 ERROR 6040 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: The server time zone value '?§Û???????' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:76)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1215)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1246)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1830)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1767)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.feng.blog.BlogApplication.main(BlogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.InvalidConnectionAttributeException: The server time zone value '?§Û???????' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.util.TimeUtil.getCanonicalTimezone(TimeUtil.java:132)
+	at com.mysql.cj.protocol.a.NativeProtocol.configureTimezone(NativeProtocol.java:2118)
+	at com.mysql.cj.protocol.a.NativeProtocol.initServerSession(NativeProtocol.java:2142)
+	at com.mysql.cj.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:1310)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:967)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 54 common frames omitted
+
+2020-03-05 10:58:04.459  WARN 6040 --- [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata : The server time zone value '?§Û???????' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+2020-03-05 10:58:04.461  WARN 6040 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2020-03-05 10:58:04.465  INFO 6040 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-05 10:58:04.477  INFO 6040 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-05 10:58:04.485 ERROR 6040 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.feng.blog.BlogApplication.main(BlogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1215)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1246)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1830)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1767)
+	... 21 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 38 common frames omitted
+
+2020-03-05 10:59:49.495  INFO 7872 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 7872 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 10:59:49.495 DEBUG 7872 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 10:59:49.495  INFO 7872 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 10:59:49.541  INFO 7872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-05 10:59:49.541  INFO 7872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-05 10:59:50.180  INFO 7872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 10:59:50.198  INFO 7872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 JPA repository interfaces.
+2020-03-05 10:59:50.970  INFO 7872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 10:59:50.993  INFO 7872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 10:59:50.994  INFO 7872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 10:59:51.146  INFO 7872 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 10:59:51.146  INFO 7872 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1605 ms
+2020-03-05 10:59:51.327  INFO 7872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-05 10:59:51.816  INFO 7872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-05 10:59:51.863  INFO 7872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 10:59:51.908  INFO 7872 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.15.Final}
+2020-03-05 10:59:51.908  INFO 7872 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-03-05 10:59:52.040  INFO 7872 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-05 10:59:52.168  INFO 7872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 10:59:52.380  INFO 7872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 10:59:52.446  INFO 7872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 10:59:52.796  INFO 7872 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 10:59:52.844  WARN 7872 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 10:59:52.900  INFO 7872 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 10:59:53.224  INFO 7872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 10:59:53.226  INFO 7872 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 4.318 seconds (JVM running for 5.167)
+2020-03-05 10:59:58.421  INFO 7872 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 10:59:58.421  INFO 7872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 10:59:58.432  INFO 7872 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-03-05 10:59:58.894  INFO 7872 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 10:59:58.894  INFO 7872 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 10:59:58.898  INFO 7872 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 10:59:58.898  INFO 7872 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:00:57.345  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:00:57.345  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:00:57.348  INFO 7872 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:00:57.349  INFO 7872 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:04:26.188  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:04:26.188  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:04:26.191  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:04:26.191  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:04:34.322  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:04:34.322  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:04:34.325  INFO 7872 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:04:34.325  INFO 7872 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:04:50.230  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:04:50.230  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:04:50.232  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:04:50.233  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:04:58.406  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:04:58.406  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:04:58.411  INFO 7872 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:04:58.412  INFO 7872 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:04:59.680  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:04:59.680  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:04:59.683  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:04:59.683  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:09:06.759  INFO 7872 --- [Thread-11] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 11:09:06.759  INFO 7872 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 11:09:06.759  INFO 7872 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-05 11:09:06.759  INFO 7872 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-05 11:09:07.256  INFO 7872 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 7872 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 11:09:07.256 DEBUG 7872 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 11:09:07.256  INFO 7872 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 11:09:07.591  INFO 7872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 11:09:07.593  INFO 7872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 JPA repository interfaces.
+2020-03-05 11:09:07.761  INFO 7872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 11:09:07.762  INFO 7872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 11:09:07.762  INFO 7872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 11:09:07.771  INFO 7872 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 11:09:07.771  INFO 7872 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 511 ms
+2020-03-05 11:09:07.848  INFO 7872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-03-05 11:09:07.863  INFO 7872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-03-05 11:09:07.870  INFO 7872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 11:09:07.890  INFO 7872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 11:09:07.907  INFO 7872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 11:09:07.942  INFO 7872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 11:09:08.152  INFO 7872 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 11:09:08.170  WARN 7872 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 11:09:08.201  INFO 7872 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 11:09:08.455  INFO 7872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 11:09:08.456  INFO 7872 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 1.245 seconds (JVM running for 560.398)
+2020-03-05 11:09:08.459  INFO 7872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-05 11:09:16.180  INFO 7872 --- [http-nio-8080-exec-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 11:09:16.182  INFO 7872 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 11:09:16.198  INFO 7872 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-03-05 11:09:16.250  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:09:16.250  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:09:16.258  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:09:16.258  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:09:20.498  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:09:20.498  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:09:20.500  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:09:20.500  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:12:05.066  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:12:05.066  INFO 7872 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:12:05.067  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:12:05.067  INFO 7872 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:13:32.498  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:13:32.499  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:13:32.502  INFO 7872 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:13:32.503  INFO 7872 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:13:40.494  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:13:40.494  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:13:40.496  INFO 7872 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:13:40.497  INFO 7872 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:30.186  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:30.187  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:30.188  INFO 7872 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:30.188  INFO 7872 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:32.169  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:32.170  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:32.171  INFO 7872 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:32.171  INFO 7872 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:32.974  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:32.974  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:32.977  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:32.977  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:33.581  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:33.581  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:33.582  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:33.583  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:34.178  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:34.178  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:34.181  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:34.181  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:34.636  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:34.637  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:34.638  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:34.638  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:35.675  INFO 7872 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:35.675  INFO 7872 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:14:35.676  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:14:35.676  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:15:21.716  INFO 7872 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:15:21.716  INFO 7872 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:15:21.718  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:15:21.718  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:15:23.987  INFO 7872 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:15:23.987  INFO 7872 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:15:23.989  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:15:23.990  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:16:24.008  INFO 7872 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:16:24.008  INFO 7872 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:16:24.010  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:16:24.011  INFO 7872 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:16:44.124  INFO 7872 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:16:44.124  INFO 7872 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:16:44.130  INFO 7872 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:16:44.130  INFO 7872 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:16:44.133  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:16:44.133  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:17:15.809  INFO 7872 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:17:15.809  INFO 7872 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:17:15.816  INFO 7872 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:17:15.816  INFO 7872 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:17:15.822  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:17:15.822  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:18:22.652  INFO 7872 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:18:22.652  INFO 7872 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:18:22.660  INFO 7872 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:18:22.660  INFO 7872 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:18:22.662  INFO 7872 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:18:22.663  INFO 7872 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:21:56.310  INFO 7872 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:21:56.310  INFO 7872 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:21:56.317  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:21:56.317  INFO 7872 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:21:56.320  INFO 7872 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:21:56.320  INFO 7872 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:31:26.661  INFO 7872 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:31:26.662  INFO 7872 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:31:26.671  INFO 7872 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:31:26.671  INFO 7872 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:31:26.674  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:31:26.674  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:33:47.578  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:33:47.578  INFO 7872 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:33:47.585  INFO 7872 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:33:47.586  INFO 7872 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:33:47.590  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:33:47.590  INFO 7872 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:33:54.061  INFO 7872 --- [Thread-27] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 11:33:54.062  INFO 7872 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 11:33:54.062  INFO 7872 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-03-05 11:33:54.070  INFO 7872 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-03-05 11:33:59.361  INFO 6036 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 6036 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 11:33:59.364 DEBUG 6036 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 11:33:59.364  INFO 6036 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 11:33:59.468  INFO 6036 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-05 11:33:59.468  INFO 6036 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-05 11:34:00.059  INFO 6036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 11:34:00.078  INFO 6036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 JPA repository interfaces.
+2020-03-05 11:34:00.860  INFO 6036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 11:34:00.880  INFO 6036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 11:34:00.880  INFO 6036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 11:34:01.047  INFO 6036 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 11:34:01.047  INFO 6036 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1579 ms
+2020-03-05 11:34:01.215  INFO 6036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-05 11:34:01.680  INFO 6036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-05 11:34:01.724  INFO 6036 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 11:34:01.778  INFO 6036 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.15.Final}
+2020-03-05 11:34:01.779  INFO 6036 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-03-05 11:34:01.917  INFO 6036 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-05 11:34:02.044  INFO 6036 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 11:34:02.244  INFO 6036 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 11:34:02.305  INFO 6036 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 11:34:02.641  INFO 6036 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 11:34:02.690  WARN 6036 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 11:34:02.743  INFO 6036 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 11:34:03.101  INFO 6036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 11:34:03.103  INFO 6036 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 4.235 seconds (JVM running for 5.095)
+2020-03-05 11:34:10.262  INFO 6036 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 11:34:10.262  INFO 6036 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 11:34:10.274  INFO 6036 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-03-05 11:34:10.649  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:34:10.649  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:34:10.649  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:34:10.654  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:34:10.654  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:34:10.654  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:36:11.472  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:36:11.472  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:36:11.479  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:36:11.479  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:36:11.484  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:36:11.485  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:39:14.564  INFO 6036 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 11:39:14.564  INFO 6036 --- [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 11:39:14.568  INFO 6036 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-05 11:39:14.572  INFO 6036 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-05 11:39:14.998  INFO 6036 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 6036 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 11:39:14.998 DEBUG 6036 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 11:39:14.998  INFO 6036 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 11:39:15.262  INFO 6036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 11:39:15.264  INFO 6036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1ms. Found 0 JPA repository interfaces.
+2020-03-05 11:39:15.478  INFO 6036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 11:39:15.479  INFO 6036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 11:39:15.479  INFO 6036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 11:39:15.501  INFO 6036 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 11:39:15.501  INFO 6036 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 501 ms
+2020-03-05 11:39:15.595  INFO 6036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-03-05 11:39:15.610  INFO 6036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-03-05 11:39:15.618  INFO 6036 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 11:39:15.654  INFO 6036 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 11:39:15.680  INFO 6036 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 11:39:15.749  INFO 6036 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 11:39:16.025  INFO 6036 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 11:39:16.043  WARN 6036 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 11:39:16.078  INFO 6036 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 11:39:16.118  WARN 6036 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-03-05 11:39:16.327  INFO 6036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 11:39:16.327  INFO 6036 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 1.36 seconds (JVM running for 318.319)
+2020-03-05 11:39:16.330  INFO 6036 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-05 11:39:17.915  INFO 6036 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 11:39:17.916  INFO 6036 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 11:39:17.929  INFO 6036 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-03-05 11:39:17.974  INFO 6036 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:39:17.980  INFO 6036 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:39:17.981  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:39:17.981  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:39:17.986  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:39:17.986  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:39:22.143  INFO 6036 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:39:22.143  INFO 6036 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:39:22.171  INFO 6036 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:39:22.171  INFO 6036 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:39:22.173  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:39:22.173  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:39:32.615  INFO 6036 --- [Thread-21] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 11:39:32.615  INFO 6036 --- [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 11:39:32.616  INFO 6036 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-03-05 11:39:32.624  INFO 6036 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-03-05 11:39:33.068  INFO 6036 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 6036 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 11:39:33.068 DEBUG 6036 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 11:39:33.068  INFO 6036 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 11:39:33.342  INFO 6036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 11:39:33.345  INFO 6036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 JPA repository interfaces.
+2020-03-05 11:39:33.533  INFO 6036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 11:39:33.534  INFO 6036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 11:39:33.535  INFO 6036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 11:39:33.544  INFO 6036 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 11:39:33.545  INFO 6036 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 474 ms
+2020-03-05 11:39:33.617  INFO 6036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-03-05 11:39:33.628  INFO 6036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-03-05 11:39:33.636  INFO 6036 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 11:39:33.655  INFO 6036 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 11:39:33.672  INFO 6036 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 11:39:33.709  INFO 6036 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 11:39:33.944  INFO 6036 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 11:39:33.961  WARN 6036 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 11:39:33.994  INFO 6036 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 11:39:34.209  INFO 6036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 11:39:34.209  INFO 6036 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 1.18 seconds (JVM running for 336.201)
+2020-03-05 11:39:34.211  INFO 6036 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-05 11:44:08.188  INFO 6036 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 11:44:08.189  INFO 6036 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 11:44:08.207  INFO 6036 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-03-05 11:44:08.273  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:44:08.280  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:44:08.282  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:44:08.282  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:44:08.285  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:44:08.285  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:44:36.878  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:44:36.878  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:44:36.878  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:44:36.878  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 11:44:36.879  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 11:44:36.879  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:12:31.539  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:12:31.540  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:12:31.550  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:12:31.551  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:12:31.554  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:12:31.554  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:15:13.281  INFO 6036 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:15:13.281  INFO 6036 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:15:13.288  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:15:13.289  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:15:13.292  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:15:13.292  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:15:55.514  INFO 6036 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:15:55.514  INFO 6036 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:15:55.523  INFO 6036 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:15:55.523  INFO 6036 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:15:55.524  INFO 6036 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:15:55.524  INFO 6036 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:17:07.110  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:17:07.110  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/Semantic-UI-CSS-master/semantic.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:17:07.111  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:17:07.111  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:17:07.118  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:17:07.119  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:17:07.123  INFO 6036 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:17:07.123  INFO 6036 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:17:41.487  INFO 6036 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:17:41.487  INFO 6036 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:17:41.495  INFO 6036 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:17:41.495  INFO 6036 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:17:41.496  INFO 6036 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:17:41.497  INFO 6036 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:18:34.251  INFO 6036 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:18:34.251  INFO 6036 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:18:34.259  INFO 6036 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:18:34.259  INFO 6036 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:18:34.262  INFO 6036 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:18:34.262  INFO 6036 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:19:31.097  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:19:31.097  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:19:31.106  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:19:31.106  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:19:31.109  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:19:31.109  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:19:51.796  INFO 6036 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/Semantic-UI-CSS-master/semantic.min.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:19:51.796  INFO 6036 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:19:51.797  INFO 6036 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:19:51.797  INFO 6036 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:19:51.803  INFO 6036 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:19:51.803  INFO 6036 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:19:51.806  INFO 6036 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:19:51.807  INFO 6036 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:19:53.773  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:19:53.773  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/Semantic-UI-CSS-master/semantic.min.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:19:53.773  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:19:53.773  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:19:53.783  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:19:53.783  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:19:53.785  INFO 6036 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:19:53.785  INFO 6036 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:22:19.466  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/Semantic-UI-CSS-master/semantic.min.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:22:19.466  INFO 6036 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:22:19.466  INFO 6036 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:22:19.466  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:22:19.473  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:22:19.474  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:22:19.476  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:22:19.476  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:23:50.586  INFO 6036 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/Semantic-UI-CSS-master/semantic.min.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:23:50.586  INFO 6036 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:23:50.586  INFO 6036 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:23:50.586  INFO 6036 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:23:50.594  INFO 6036 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:23:50.594  INFO 6036 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:23:50.595  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:23:50.596  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:23:54.898  INFO 6036 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:23:54.898  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/Semantic-UI-CSS-master/semantic.min.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:23:54.899  INFO 6036 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:23:54.899  INFO 6036 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:23:54.907  INFO 6036 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:23:54.907  INFO 6036 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:23:54.909  INFO 6036 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:23:54.909  INFO 6036 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:23:55.763  INFO 6036 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/Semantic-UI-CSS-master/semantic.min.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:23:55.763  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:23:55.763  INFO 6036 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:23:55.763  INFO 6036 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:23:55.770  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:23:55.770  INFO 6036 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:23:55.772  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:23:55.772  INFO 6036 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:24:10.910  INFO 6036 --- [Thread-32] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 12:24:10.911  INFO 6036 --- [Thread-32] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 12:24:10.911  INFO 6036 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-03-05 12:24:10.916  INFO 6036 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-03-05 12:24:14.182  INFO 9796 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 9796 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 12:24:14.185 DEBUG 9796 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 12:24:14.185  INFO 9796 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 12:24:14.238  INFO 9796 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-05 12:24:14.238  INFO 9796 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-05 12:24:14.859  INFO 9796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 12:24:14.879  INFO 9796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 JPA repository interfaces.
+2020-03-05 12:24:15.618  INFO 9796 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 12:24:15.639  INFO 9796 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 12:24:15.640  INFO 9796 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 12:24:15.779  INFO 9796 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 12:24:15.779  INFO 9796 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1541 ms
+2020-03-05 12:24:15.941  INFO 9796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-05 12:24:16.371  INFO 9796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-05 12:24:16.413  INFO 9796 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 12:24:16.468  INFO 9796 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.15.Final}
+2020-03-05 12:24:16.469  INFO 9796 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-03-05 12:24:16.597  INFO 9796 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-05 12:24:16.721  INFO 9796 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 12:24:16.904  INFO 9796 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 12:24:16.967  INFO 9796 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 12:24:17.317  INFO 9796 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 12:24:17.364  WARN 9796 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 12:24:17.414  INFO 9796 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 12:24:17.733  INFO 9796 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 12:24:17.735  INFO 9796 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 4.161 seconds (JVM running for 5.019)
+2020-03-05 12:24:22.966  INFO 9796 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 12:24:22.966  INFO 9796 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 12:24:22.977  INFO 9796 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-03-05 12:24:23.374  INFO 9796 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:24:23.374  INFO 9796 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:24:23.374  INFO 9796 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/Semantic-UI-CSS-master/semantic.min.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:24:23.374  INFO 9796 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:24:23.379  INFO 9796 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:24:23.379  INFO 9796 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:24:23.379  INFO 9796 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:24:23.379  INFO 9796 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:25:11.524  INFO 9796 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:25:11.524  INFO 9796 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/Semantic-UI-CSS-master/semantic.min.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:25:11.524  INFO 9796 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:25:11.524  INFO 9796 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:25:11.531  INFO 9796 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:25:11.532  INFO 9796 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:25:11.536  INFO 9796 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:25:11.536  INFO 9796 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:25:17.619  INFO 9796 --- [Thread-17] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 12:25:17.620  INFO 9796 --- [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 12:25:17.624  INFO 9796 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-05 12:25:17.629  INFO 9796 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-05 12:25:20.531  INFO 7368 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 7368 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 12:25:20.535 DEBUG 7368 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 12:25:20.535  INFO 7368 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 12:25:20.644  INFO 7368 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-05 12:25:20.644  INFO 7368 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-05 12:25:21.267  INFO 7368 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 12:25:21.285  INFO 7368 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 JPA repository interfaces.
+2020-03-05 12:25:22.070  INFO 7368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 12:25:22.091  INFO 7368 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 12:25:22.091  INFO 7368 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 12:25:22.259  INFO 7368 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 12:25:22.260  INFO 7368 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1615 ms
+2020-03-05 12:25:22.429  INFO 7368 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-05 12:25:22.874  INFO 7368 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-05 12:25:22.915  INFO 7368 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 12:25:22.967  INFO 7368 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.15.Final}
+2020-03-05 12:25:22.969  INFO 7368 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-03-05 12:25:23.096  INFO 7368 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-05 12:25:23.222  INFO 7368 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 12:25:23.410  INFO 7368 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 12:25:23.470  INFO 7368 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 12:25:23.815  INFO 7368 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 12:25:23.865  WARN 7368 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 12:25:23.925  INFO 7368 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 12:25:24.274  INFO 7368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 12:25:24.277  INFO 7368 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 4.247 seconds (JVM running for 5.097)
+2020-03-05 12:25:37.760  INFO 7368 --- [Thread-17] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 12:25:37.761  INFO 7368 --- [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 12:25:37.764  INFO 7368 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-05 12:25:37.767  INFO 7368 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-05 12:25:40.894  INFO 5936 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 5936 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 12:25:40.895 DEBUG 5936 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 12:25:40.896  INFO 5936 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 12:25:40.942  INFO 5936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-05 12:25:40.942  INFO 5936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-05 12:25:41.579  INFO 5936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 12:25:41.598  INFO 5936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 JPA repository interfaces.
+2020-03-05 12:25:42.449  INFO 5936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 12:25:42.479  INFO 5936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 12:25:42.480  INFO 5936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 12:25:42.573  INFO 5936 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 12:25:42.573  INFO 5936 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1631 ms
+2020-03-05 12:25:42.834  INFO 5936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-05 12:25:43.268  INFO 5936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-05 12:25:43.311  INFO 5936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 12:25:43.363  INFO 5936 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.15.Final}
+2020-03-05 12:25:43.364  INFO 5936 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-03-05 12:25:43.501  INFO 5936 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-05 12:25:43.633  INFO 5936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 12:25:43.839  INFO 5936 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 12:25:43.910  INFO 5936 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 12:25:44.304  INFO 5936 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 12:25:44.355  WARN 5936 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 12:25:44.408  INFO 5936 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 12:25:44.760  INFO 5936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 12:25:44.762  INFO 5936 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 4.533 seconds (JVM running for 5.435)
+2020-03-05 12:25:46.343  INFO 5936 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 12:25:46.343  INFO 5936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 12:25:46.358  INFO 5936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-03-05 12:25:46.754  INFO 5936 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:25:46.754  INFO 5936 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/Semantic-UI-CSS-master/semantic.min.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:25:46.754  INFO 5936 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:25:46.754  INFO 5936 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:25:46.758  INFO 5936 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:25:46.758  INFO 5936 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:25:46.758  INFO 5936 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:25:46.758  INFO 5936 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:26:58.759  INFO 5936 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/Semantic-UI-CSS-master/semantic.min.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:26:58.759  INFO 5936 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:26:58.760  INFO 5936 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:26:58.760  INFO 5936 --- [http-nio-8080-exec-2] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:26:58.760  INFO 5936 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:26:58.760  INFO 5936 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:26:58.774  INFO 5936 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:26:58.774  INFO 5936 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:27:36.861  INFO 5936 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/Semantic-UI-CSS-master/semantic.min.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:27:36.861  INFO 5936 --- [http-nio-8080-exec-10] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:27:36.861  INFO 5936 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/css/me.css', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:27:36.862  INFO 5936 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:27:36.862  INFO 5936 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/js/jquery-3.1.1.min.js', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:27:36.863  INFO 5936 --- [http-nio-8080-exec-7] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:27:36.870  INFO 5936 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/image/laohu.jpg', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:27:36.870  INFO 5936 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:30:48.768  INFO 5936 --- [Thread-11] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 12:30:48.768  INFO 5936 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 12:30:48.772  INFO 5936 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-05 12:30:48.775  INFO 5936 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-05 12:30:49.253  INFO 5936 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 5936 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 12:30:49.253 DEBUG 5936 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 12:30:49.253  INFO 5936 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 12:30:49.540  INFO 5936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 12:30:49.543  INFO 5936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 JPA repository interfaces.
+2020-03-05 12:30:49.734  INFO 5936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 12:30:49.735  INFO 5936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 12:30:49.735  INFO 5936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 12:30:49.747  INFO 5936 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 12:30:49.748  INFO 5936 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 491 ms
+2020-03-05 12:30:49.823  INFO 5936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-03-05 12:30:49.839  INFO 5936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-03-05 12:30:49.847  INFO 5936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 12:30:49.868  INFO 5936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 12:30:49.885  INFO 5936 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 12:30:49.921  INFO 5936 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 12:30:50.148  INFO 5936 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 12:30:50.168  WARN 5936 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 12:30:50.201  INFO 5936 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 12:30:50.402  INFO 5936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 12:30:50.403  INFO 5936 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 1.2 seconds (JVM running for 311.075)
+2020-03-05 12:30:50.406  INFO 5936 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-05 12:30:52.833  INFO 5936 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 12:30:52.834  INFO 5936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 12:30:52.844  INFO 5936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-03-05 12:30:52.851  INFO 5936 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:30:52.854  INFO 5936 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:31:12.457  INFO 5936 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:31:12.457  INFO 5936 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:31:54.740  INFO 5936 --- [Thread-27] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 12:31:54.740  INFO 5936 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 12:31:54.741  INFO 5936 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-03-05 12:31:54.750  INFO 5936 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-03-05 12:32:01.353  INFO 6604 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 6604 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 12:32:01.356 DEBUG 6604 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 12:32:01.356  INFO 6604 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 12:32:01.449  INFO 6604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-05 12:32:01.449  INFO 6604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-05 12:32:02.064  INFO 6604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 12:32:02.084  INFO 6604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 JPA repository interfaces.
+2020-03-05 12:32:02.882  INFO 6604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 12:32:02.903  INFO 6604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 12:32:02.903  INFO 6604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 12:32:02.988  INFO 6604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 12:32:02.989  INFO 6604 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1540 ms
+2020-03-05 12:32:03.252  INFO 6604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-05 12:32:03.688  INFO 6604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-05 12:32:03.731  INFO 6604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 12:32:03.786  INFO 6604 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.15.Final}
+2020-03-05 12:32:03.788  INFO 6604 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-03-05 12:32:03.933  INFO 6604 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-05 12:32:04.058  INFO 6604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 12:32:04.279  INFO 6604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 12:32:04.340  INFO 6604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 12:32:04.704  INFO 6604 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 12:32:04.758  WARN 6604 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 12:32:05.105  INFO 6604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 12:32:05.110  INFO 6604 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 4.294 seconds (JVM running for 5.166)
+2020-03-05 12:32:10.824  INFO 6604 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 12:32:10.824  INFO 6604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 12:32:10.835  INFO 6604 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-03-05 12:32:10.910  INFO 6604 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:32:10.914  INFO 6604 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 12:32:54.438  INFO 6604 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 12:32:54.439  INFO 6604 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 12:32:54.442  INFO 6604 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-05 12:32:54.446  INFO 6604 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-05 12:33:00.542  INFO 11068 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 11068 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 12:33:00.545 DEBUG 11068 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 12:33:00.545  INFO 11068 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 12:33:00.640  INFO 11068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-05 12:33:00.640  INFO 11068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-05 12:33:01.300  INFO 11068 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 12:33:01.318  INFO 11068 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 JPA repository interfaces.
+2020-03-05 12:33:02.212  INFO 11068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 12:33:02.232  INFO 11068 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 12:33:02.233  INFO 11068 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 12:33:02.408  INFO 11068 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 12:33:02.409  INFO 11068 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1769 ms
+2020-03-05 12:33:02.577  INFO 11068 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-05 12:33:03.059  INFO 11068 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-05 12:33:03.103  INFO 11068 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 12:33:03.156  INFO 11068 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.15.Final}
+2020-03-05 12:33:03.157  INFO 11068 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-03-05 12:33:03.284  INFO 11068 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-05 12:33:03.414  INFO 11068 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 12:33:03.597  INFO 11068 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 12:33:03.660  INFO 11068 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 12:33:04.013  INFO 11068 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 12:33:04.065  WARN 11068 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 12:33:04.119  INFO 11068 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 12:33:04.453  INFO 11068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 12:33:04.456  INFO 11068 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 4.419 seconds (JVM running for 5.295)
+2020-03-05 12:33:06.083  INFO 11068 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 12:33:06.084  INFO 11068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 12:33:06.095  INFO 11068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-03-05 12:33:06.173  INFO 11068 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 12:33:06.175  INFO 11068 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 13:56:02.618  INFO 11068 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 13:56:02.618  INFO 11068 --- [http-nio-8080-exec-4] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 13:56:02.649 ERROR 11068 --- [http-nio-8080-exec-4] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-4] Exception processing template "index": An error happened during template parsing (template: "class path resource [templates/index.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1372)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Error resolving template [_fragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "index" - line 3, col 7)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 52 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [_fragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "index" - line 3, col 7)
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseStandalone(TemplateManager.java:250)
+	at org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:588)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 54 common frames omitted
+
+2020-03-05 13:56:02.651 ERROR 11068 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index.html]")] with root cause
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [_fragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "index" - line 3, col 7)
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseStandalone(TemplateManager.java:250)
+	at org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:588)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1372)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-05 13:59:19.571  INFO 11068 --- [Thread-17] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 13:59:19.571  INFO 11068 --- [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 13:59:19.575  INFO 11068 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-05 13:59:19.584  INFO 11068 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-05 13:59:22.811  INFO 3460 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 3460 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 13:59:22.815 DEBUG 3460 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 13:59:22.815  INFO 3460 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 13:59:22.859  INFO 3460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-05 13:59:22.860  INFO 3460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-05 13:59:23.486  INFO 3460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 13:59:23.505  INFO 3460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 JPA repository interfaces.
+2020-03-05 13:59:24.268  INFO 3460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 13:59:24.291  INFO 3460 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 13:59:24.291  INFO 3460 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 13:59:24.442  INFO 3460 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 13:59:24.443  INFO 3460 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1583 ms
+2020-03-05 13:59:24.611  INFO 3460 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-05 13:59:25.052  INFO 3460 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-05 13:59:25.092  INFO 3460 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 13:59:25.143  INFO 3460 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.15.Final}
+2020-03-05 13:59:25.144  INFO 3460 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-03-05 13:59:25.276  INFO 3460 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-05 13:59:26.767  INFO 3460 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 13:59:26.954  INFO 3460 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 13:59:27.022  INFO 3460 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 13:59:27.375  INFO 3460 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 13:59:27.422  WARN 3460 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 13:59:27.470  INFO 3460 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 13:59:27.787  INFO 3460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 13:59:27.790  INFO 3460 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 5.594 seconds (JVM running for 6.444)
+2020-03-05 13:59:31.651  INFO 3460 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 13:59:31.652  INFO 3460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 13:59:31.681  INFO 3460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 29 ms
+2020-03-05 13:59:31.760  INFO 3460 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 13:59:31.764  INFO 3460 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 17:21:54.172  INFO 3460 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 17:21:54.173  INFO 3460 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 17:21:54.191 ERROR 3460 --- [http-nio-8080-exec-9] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-9] Exception processing template "index": An error happened during template parsing (template: "class path resource [templates/index.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1372)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Error resolving fragment: "~{_fragments :: menu ('_arg0'=1)}": template or fragment could not be resolved (template: "index" - line 15, col 10)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 52 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving fragment: "~{_fragments :: menu ('_arg0'=1)}": template or fragment could not be resolved (template: "index" - line 15, col 10)
+	at org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:619)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 54 common frames omitted
+
+2020-03-05 17:21:54.195 ERROR 3460 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index.html]")] with root cause
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving fragment: "~{_fragments :: menu ('_arg0'=1)}": template or fragment could not be resolved (template: "index" - line 15, col 10)
+	at org.thymeleaf.standard.expression.FragmentExpression.resolveExecutedFragmentExpression(FragmentExpression.java:619)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.computeFragment(AbstractStandardFragmentInsertionTagProcessor.java:379)
+	at org.thymeleaf.standard.processor.AbstractStandardFragmentInsertionTagProcessor.doProcess(AbstractStandardFragmentInsertionTagProcessor.java:110)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1372)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-05 17:23:39.009  INFO 3460 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 17:23:39.009  INFO 3460 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 17:23:39.013  INFO 3460 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-05 17:23:39.025  INFO 3460 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-05 17:23:44.594  INFO 7884 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 7884 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 17:23:44.597 DEBUG 7884 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 17:23:44.598  INFO 7884 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 17:23:44.645  INFO 7884 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-05 17:23:44.645  INFO 7884 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-05 17:23:45.271  INFO 7884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 17:23:45.289  INFO 7884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 JPA repository interfaces.
+2020-03-05 17:23:46.057  INFO 7884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 17:23:46.077  INFO 7884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 17:23:46.078  INFO 7884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 17:23:46.228  INFO 7884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 17:23:46.228  INFO 7884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1583 ms
+2020-03-05 17:23:46.394  INFO 7884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-05 17:23:46.844  INFO 7884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-05 17:23:46.884  INFO 7884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 17:23:46.939  INFO 7884 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.15.Final}
+2020-03-05 17:23:46.941  INFO 7884 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-03-05 17:23:47.080  INFO 7884 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-05 17:23:47.211  INFO 7884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 17:23:47.402  INFO 7884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 17:23:47.467  INFO 7884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 17:23:47.818  INFO 7884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 17:23:47.870  WARN 7884 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 17:23:47.919  INFO 7884 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 17:23:48.237  INFO 7884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 17:23:48.239  INFO 7884 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 4.237 seconds (JVM running for 5.038)
+2020-03-05 17:23:55.318  INFO 7884 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 17:23:55.318  INFO 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 17:23:55.328  INFO 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-03-05 17:23:55.419  INFO 7884 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 17:23:55.423  INFO 7884 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 17:35:14.803  INFO 7884 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 17:35:14.803  INFO 7884 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : index
+2020-03-05 17:40:39.423  INFO 7884 --- [Thread-11] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 17:40:39.423  INFO 7884 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 17:40:39.428  INFO 7884 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-05 17:40:39.432  INFO 7884 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-05 17:40:39.854  INFO 7884 --- [restartedMain] com.feng.blog.BlogApplication            : Starting BlogApplication on PC-202002170933 with PID 7884 (E:\Workspace\blog\target\classes started by Administrator in E:\Workspace\blog)
+2020-03-05 17:40:39.854 DEBUG 7884 --- [restartedMain] com.feng.blog.BlogApplication            : Running with Spring Boot v2.1.13.RELEASE, Spring v5.1.14.RELEASE
+2020-03-05 17:40:39.854  INFO 7884 --- [restartedMain] com.feng.blog.BlogApplication            : The following profiles are active: dev
+2020-03-05 17:40:40.093  INFO 7884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-05 17:40:40.095  INFO 7884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1ms. Found 0 JPA repository interfaces.
+2020-03-05 17:40:40.272  INFO 7884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-05 17:40:40.273  INFO 7884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 17:40:40.273  INFO 7884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-05 17:40:40.289  INFO 7884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 17:40:40.289  INFO 7884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 432 ms
+2020-03-05 17:40:40.370  INFO 7884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-03-05 17:40:40.383  INFO 7884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-03-05 17:40:40.391  INFO 7884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-05 17:40:40.449  INFO 7884 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-03-05 17:40:40.477  INFO 7884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 17:40:40.544  INFO 7884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 17:40:40.791  INFO 7884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 17:40:40.808  WARN 7884 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-05 17:40:40.844  INFO 7884 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 17:40:41.073  INFO 7884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-05 17:40:41.074  INFO 7884 --- [restartedMain] com.feng.blog.BlogApplication            : Started BlogApplication in 1.259 seconds (JVM running for 1017.872)
+2020-03-05 17:40:41.077  INFO 7884 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-05 17:40:46.453  INFO 7884 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 17:40:46.454  INFO 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 17:40:46.463  INFO 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-03-05 17:40:46.470  INFO 7884 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 17:40:46.474  INFO 7884 --- [http-nio-8080-exec-1] com.feng.blog.aspect.LogAspect           : Result : blog
+2020-03-05 17:42:32.529  INFO 7884 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 17:42:32.530  INFO 7884 --- [http-nio-8080-exec-3] com.feng.blog.aspect.LogAspect           : Result : blog
+2020-03-05 17:56:58.683  INFO 7884 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 17:56:58.684  INFO 7884 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : blog
+2020-03-05 18:00:40.483  INFO 7884 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 18:00:40.483  INFO 7884 --- [http-nio-8080-exec-8] com.feng.blog.aspect.LogAspect           : Result : blog
+2020-03-05 18:00:45.685  INFO 7884 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 18:00:45.685  INFO 7884 --- [http-nio-8080-exec-5] com.feng.blog.aspect.LogAspect           : Result : blog
+2020-03-05 18:00:47.571  INFO 7884 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 18:00:47.571  INFO 7884 --- [http-nio-8080-exec-6] com.feng.blog.aspect.LogAspect           : Result : blog
+2020-03-05 18:01:22.013  INFO 7884 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Request : {id='127.0.0.1', url='/', classMethod='com.feng.blog.web.indexController.index', args=[]}
+2020-03-05 18:01:22.013  INFO 7884 --- [http-nio-8080-exec-9] com.feng.blog.aspect.LogAspect           : Result : blog

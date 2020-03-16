@@ -1,0 +1,10 @@
+spring:
+  #设置thymeleaf的mode
+  thymeleaf:
+    mode: HTML
+  #指定使用哪个环境配置
+  profiles:
+    active: dev
+
+
+comment.avatar: /static/image/avatar.png

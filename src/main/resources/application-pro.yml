@@ -1,0 +1,23 @@
+#生产环境配置
+spring:
+    #设置数据库连接
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+  #根据映射文件更新数据库
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+#设置日志
+logging:
+  level:
+    root: warn
+      com.feng.blog: info
+  file: log/blog-pro.log
+
+#设置端口号
+server:
+  port: 8081
