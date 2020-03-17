@@ -100,6 +100,9 @@ body{
 .m-black{
     color: #333 !important;
 }
+.m-teal{
+    color:teal !important;
+}
 /*--------------position---------------------*/
 .m-right-top{
     position: absolute;

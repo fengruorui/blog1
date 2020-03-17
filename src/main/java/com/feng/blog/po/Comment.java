@@ -29,6 +29,7 @@ public class Comment {
     @ManyToOne
     private Comment parentComment;//评论中的父评论，是多对一
 
+    private boolean adminComment;
     public Comment() {
     }
 
@@ -104,6 +105,14 @@ public class Comment {
         this.blog = blog;
     }
 
+    public boolean isAdminComment() {
+        return adminComment;
+    }
+
+    public void setAdminComment(boolean adminComment) {
+        this.adminComment = adminComment;
+    }
+
     @Override
     public String toString() {
         return "Comment{" +
@@ -116,6 +125,7 @@ public class Comment {
                 ", blog=" + blog +
                 ", replyComment=" + replyComment +
                 ", parentComment=" + parentComment +
+                ", adminComment=" + adminComment +
                 '}';
     }
 }

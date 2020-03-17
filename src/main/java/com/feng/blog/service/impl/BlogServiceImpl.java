@@ -62,17 +62,20 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    @Transactional
     public Page<Blog> listBlog(Pageable pageable) {
         return blogRepository.findAll(pageable);
     }
 
     @Override
+    @Transactional
     public Page<Blog> listBlog(String query, Pageable pageable) {
 
         return blogRepository.findByQuery(query, pageable);
     }
 
     @Override
+    @Transactional
     public List<Blog> listRecommendBlogTop(Integer size) {
         Sort sort=new Sort(Sort.Direction.DESC,"updateTime");
         Pageable pageable= PageRequest.of(0, size,sort);
@@ -112,6 +115,7 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    @Transactional
     public Blog getAndConvert(Long id) {
         Blog blog = blogRepository.getOne(id);
         if(blog == null){
@@ -121,6 +125,7 @@ public class BlogServiceImpl implements BlogService {
         BeanUtils.copyProperties(blog, blog1);
         String content = blog1.getContent();
         blog1.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        blogRepository.updataView(id);
         return blog1;
     }
 }

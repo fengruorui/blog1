@@ -7,4 +7,4 @@ spring:
     active: dev
 
 
-comment.avatar: /static/image/avatar.png
+comment.avatar: /image/avatar.png
