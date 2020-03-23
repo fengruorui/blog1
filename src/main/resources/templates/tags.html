@@ -40,15 +40,17 @@
                     <h3 class="ui teal header">标签</h3>
                 </div>
                 <div class="right aligned column">
-                    共<h2 class="ui header orange m-inline-block m-text-thin">14</h2>篇
+                    共<h2 class="ui header orange m-inline-block m-text-thin" th:text="${page.totalElements}">14</h2>篇
                 </div>
             </div>
         </div>
         <!--分类-->
         <div class="ui attached segment m-padded-tb-large">
-            <a class="ui teal basic left pointing large label m-margin-tb-tiny">
-                方法论 <div class="detail">23</div>
+            <a class="ui basic left pointing large label m-margin-tb-tiny" th:each="tag : ${tags}" href="#"
+               th:href="@{/tags/{id}(id=${tag.id})" th:text="${tag.name}" th:classappend="${tag.id==activeTypeId} ? 'teal'">
+                方法论 <div class="detail" th:text="${#arrays.length(tag.blogs)}">23</div>
             </a>
+            <!--/*-->
             <a class="ui basic left pointing large label m-margin-tb-tiny">
                 方法论 <div class="detail">23</div>
             </a>
@@ -58,6 +60,7 @@
             <a class="ui basic left pointing large label m-margin-tb-tiny">
                 方法论 <div class="detail">23</div>
             </a>
+            <!--*/-->
         </div>
 
         <div class="ui top attached teal segment">
