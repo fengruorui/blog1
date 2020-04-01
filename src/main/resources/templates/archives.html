@@ -40,24 +40,26 @@
                     <h3 class="ui teal header">归档</h3>
                 </div>
                 <div class="right aligned column">
-                    共<h2 class="ui header orange m-inline-block m-text-thin">141</h2>篇博客
+                    共<h2 class="ui header orange m-inline-block m-text-thin" th:text="${blogCount}">141</h2>篇博客
                 </div>
             </div>
         </div>
 
-        <h2 class="ui center aligned header">2017</h2>
-        <div class="ui fluid vertical menu middle aligned">
+        <th:block th:each="item : ${archivesMap}">
+            <h2 class="ui center aligned header" th:text="${item.key}">2017</h2>
+            <div class="ui fluid vertical menu middle aligned">
 
-            <a href="#" target="_blank" class="item">
-                <span>
-                    <i class="circle icon teal mini"></i>&nbsp;&nbsp;&nbsp;今日事今日毕
-                    <div class="ui mini teal basic left pointing label">9月13</div>
-                </span>
-                <div class="ui orange basic  label">转载</div>
-            </a>
+                <a href="#"th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item" th:each="blog : ${item.value}">
+                    <span>
+                        <i class="circle icon teal mini"></i>&nbsp;&nbsp;&nbsp;<span th:text="${blog.title}">今日事今日毕</span>
+                        <div class="ui mini teal basic left pointing label" th:text="${#dates.format(blog.updateTime,'MMMdd')}">9月13</div>
+                    </span>
+                    <div class="ui orange basic  label" th:text="${blog.flag}">转载</div>
+                </a>
 
 
-        </div>
+            </div>
+        </th:block>
 
 
     </div>
@@ -69,7 +71,7 @@
             <div class="three wide column">
                 <div class="ui inverted link list">
                     <div class="item">
-                        <img src="../static/image/laohu.jpg" class="ui rounded image" alt="" style="width: 110px">
+                        <img src="../static/image/weixin.jpg" class="ui rounded image" alt="" style="width: 110px">
                     </div>
                 </div>
             </div>

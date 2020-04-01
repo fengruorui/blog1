@@ -46,4 +46,15 @@ public class indexController {
         model.addAttribute("blog",blogService.getAndConvert(id));
         return "blog";
     }
+
+    @GetMapping("/footer/newblog")
+    public String newBlog(Model model){
+        model.addAttribute("newblogs",blogService.listRecommendBlogTop(3));
+        return "_fragments :: newblogList";
+    }
+
+    @GetMapping("/about")
+    public String about(){
+        return "about";
+    }
 }
